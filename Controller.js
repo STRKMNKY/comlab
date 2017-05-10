@@ -15,8 +15,8 @@ app.controller("consultEvent", ['$scope', '$filter', function($scope,$filter){
  	 Events = database.ref("/events");
  	 Events.on("child_added",addEvent)
  	 function addEvent(data){
- 	 	$scope.Events= data.val();
- 	 	console.log($scope.Events);
+ 	 	$scope.Events.push(data.val());
+ 	 	// console.log($scope.Events);
  	 }
  	/*var starCountRef = firebase.database().ref('/events');
 	 starCountRef.on('value', function(snapshot) {
@@ -39,7 +39,7 @@ app.controller("Comlab",['$scope', '$filter', function($scope,$filter){
 	$scope.file={};
 	$scope.user ={};
 	$scope.Event = {};
-	$scope.project= {};s
+	$scope.project= {};
 	$scope.News = {};
 	$scope.newUser = {};
 	$scope.registroGoogle = function(){
