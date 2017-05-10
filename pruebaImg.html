@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="Images">
+<head >
+	<meta charset="utf-8">
+	
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	
+	<script src="images.js"></script>
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body ng-controller="img">
+	<form ng-submit="sendImg()">
+		<input type="file" id="img" ng-model="img">
+		<input type="submit" value="Probar">
+	</form>
+	
+</body>
+</html>

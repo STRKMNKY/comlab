@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="ComLab">
+<head>
+	<meta charset="utf-8">
+	
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	
+	<script src="Controller.js"></script>
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body ng-controller="consultEvent">
+	<ul>
+		<li ng-repeat= "Events in Events">
+			{{Events.title}}
+		</li>
+	</ul>
+
+</body>
+</html>

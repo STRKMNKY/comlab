@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="ComLab">
+<head>
+	<meta charset="utf-8">
+	
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	
+	<script src="Controller.js"></script>
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+	<title></title>
+</head>
+<body ng-controller="Comlab">
+	<a href="consultas.html">Eventos</a>
+	<h1>Registro</h1>
+	Nomvre: <input type="text" name="name" ng-model="newUser.name">
+	<br><br>
+	E-mail: <input type="email" name="e-mail" ng-model="newUser.email">
+	<br><br>
+	Contraseña <input type="password" name="pass" ng-model="newUser.pass">
+	<br><br>
+	<button ng-click="registro()">Registrar</button>
+	<br><br>
+	<button ng-click="registroGoogle()">Registrate con Google</button>
+	<br><br>
+	<button ng-click="registroFacebook()">Registrate con Facebook</button>
+	<br><br>
+	usuario: <input type="text" ng-model="Event.owner" required>
+	<br>usuario: <input type="text" ng-model="News.owner" required>
+	<br>usuario: <input type="text" ng-model="project.owner" required>
+	<!--Formulario altas eventos-->
+	<h1>Eventos</h1><br><br>
+	imagen: <input type="file" name="img" ng-model="file"><br><br>
+	Titulo del evento:   <input type="text" name="title" ng-model="Event.title">
+	<br><br>
+	Direccion: <input type="text" name="adress" ng-model="Event.adress">
+	<br><br>
+	Fecha:  <input type="date" id="date" name="date" ng-model="Event.date">
+	<br><br>
+	descripcion: <input type="text" name="description" ng-model="Event.description">
+	<br><br>
+	tag:   <input type="text" name="tag" ng-model="Event.tag">
+	<br><br>
+	time: <input type="time" name="hour"  ng-model="Event.hour">
+	<br><br>
+	<button ng-click="newEvent()">Crear Evento</button>
+	<!--Formulario altas noticias-->
+	<h1>Noticias</h1>
+	<br>
+	descripcion: <input type="text" name="descipcion" ng-model="News.description">
+	<br><br>
+	Fuente(s): <input type="text" name="source" ng-model="News.source">
+	<br><br>
+	Tag: <input type="text" name="tag" ng-model="News.tag"> 
+	<br><br>
+	titulo <input type="text" name="title" ng-model="News.title">
+	<br><br>
+	<button ng-click="newNew()">Publicar Noticia</button>
+	<!--Formulario proyectos-->
+	<br><br>
+	<h1>Proyectos</h1>
+	<br><br>
+	Desciption: <input type="text" name="description" ng-model="project.description"><br><br>
+	Documents: <input type="text" name="documents" ng-model = "project.documents"><br><br>
+	Tag: <input type="text" name="tag" ng-model = "project.tag"><br><br>
+	Title: <input type="text" name="title" ng-model = "project.title"><br><br>
+	<button ng-click = "newProject()">Crear nuevo projecto</button>
+
+</body>
+</html>
